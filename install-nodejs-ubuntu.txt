@@ -1,0 +1,2 @@
+https://computingforgeeks.com/how-to-install-nodejs-on-ubuntu-debian-linux-mint/
+// сылка как загрузить на хост
