@@ -13,13 +13,13 @@ app.use('/t', require('./routes/redirect.routes'))
 
 
 // тут даем фронтент если продакшн то что бы указать статичиский папку наш
-if (process.env.NODE_ENV === 'production') {
+
   app.use('/', express.static(path.join(__dirname, 'client', 'build')))
 // на любой другой запрос отправим файл index.html одно время будить работать backend front
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
   })
-}
+
 
 const PORT = config.get('port') || 5000
 
